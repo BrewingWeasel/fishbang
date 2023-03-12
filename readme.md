@@ -15,8 +15,14 @@ This has the advantage of replacing everything inline, so you can be more confid
 ## Install
 
 
-### Installing with [Fisher](https://github.com/jorgebucaran/fisher)
+### Installing with [Fisher](https://github.com/jorgebucaran/fisher):
 
 ```fish
 fisher install brewingweasel/fishbang
+```
+
+### Installing with [oh-my-fish](https://github.com/oh-my-fish/oh-my-fish) *should* also work:
+
+```fish
+omf install https://github.com/BrewingWeasel/fishbang
 ```

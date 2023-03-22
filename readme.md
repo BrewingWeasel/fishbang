@@ -10,6 +10,7 @@ This has the advantage of replacing everything inline, so you can be more confid
 - ``!!`` returns the last command. Taken from the fish documentation
 - ``!^`` returns the first argument of the last command
 - ``!$`` returns the last argument of the last command
+- ``!*`` returns all the arguments of the last command
 - ``!:n`` returns the nth argument of the last command
 
 ## Install

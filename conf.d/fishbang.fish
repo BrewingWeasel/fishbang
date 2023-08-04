@@ -10,6 +10,7 @@ function nth_history_item
 end
 
 function _nth_history_arg
+  commandline -f backward-delete-char
   echo $history[1] | read -t --list args
   for _i in (seq 1 (math (count $args) - $argv[1]))
     commandline -f history-token-search-backward
@@ -17,6 +18,7 @@ function _nth_history_arg
 end
 
 function last_history_arg
+  commandline -f backward-delete-char
   commandline -f history-token-search-backward
 end
 

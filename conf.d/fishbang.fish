@@ -10,20 +10,18 @@ function nth_history_item
 end
 
 function _nth_history_arg
-  commandline -f backward-delete-char
   echo $history[1] | read -t --list args
-  for _i in (seq 1 (math (count $args) - $argv[1]))
-    commandline -f history-token-search-backward
-  end
+  echo $args[(math $argv[1] + 1)]
 end
 
 function last_history_arg
-  commandline -f backward-delete-char
-  commandline -f history-token-search-backward
+  echo $history[1] | read -t --list args
+  echo $args[-1]
 end
 
 function first_history_arg
-  _nth_history_arg 1
+  echo $history[1] | read -t --list args
+  echo $args[2]
 end
 
 function history_args
@@ -49,7 +47,7 @@ end
 abbr -a bang_history_prefix_search --position anywhere --regex '!([a-zA-Z0-9_.-]*)' --function history_prefix_search # !dnf returns the last command that started with dnf
 abbr -a bang_history_search --position anywhere --regex '!\?([a-zA-Z0-9_.-]*)' --function history_search # !?abc returns the last command that included abc
 
-abbr -a bang_negative_nth_history_item --position anywhere --regex '!-?([0-9]*)' --function nth_history_item  # !3 returns the 3rd command used. !-3 returns the 3rd most recent command used.
+abbr -a bang_negative_nth_history_item --position anywhere --regex '!-?([0-9]*)' --function nth_history_item # !3 returns the 3rd command used. !-3 returns the 3rd most recent command used.
 abbr -a !! --position anywhere --function last_history_item # !! returns the last command. Taken from the fish documentation
 
 # Arguments

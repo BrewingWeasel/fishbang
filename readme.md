@@ -27,3 +27,19 @@ fisher install brewingweasel/fishbang
 ```fish
 omf install https://github.com/BrewingWeasel/fishbang
 ```
+
+# Troubleshooting:
+
+### Unable to use `!$` at the end of the line:
+You have two options:
+
+1. Press space before enter
+2. Rebind enter to also expand the abbreviation:
+   
+   `bind enter expand-abbr execute`
+   
+   or (for vi keybinds):
+   
+   `bind -M insert enter expand-abbr execute`
+   
+   `bind -M default enter expand-abbr execute`

@@ -53,5 +53,6 @@ abbr -a !! --position anywhere --function last_history_item # !! returns the las
 # Arguments
 abbr -a !^ --position anywhere --function first_history_arg # !^ returns the first argument of the last command
 abbr -a !\$ --position anywhere --function last_history_arg # !$ returns the last argument of the last command
+abbr -a \$_ --position anywhere --function last_history_arg # !$ returns the last argument of the last command
 abbr -a !\* --position anywhere --function history_args # !* returns all arguments of the last command
 abbr -a bang_nth_arg --position anywhere --regex '!:([0-9]+)' --function nth_history_arg # !$ returns the last argument of the last command
